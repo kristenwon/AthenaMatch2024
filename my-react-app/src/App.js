@@ -13,7 +13,7 @@ function App() {
           <div>
             <label htmlFor="department">Department:</label>
             <input
-              type="text"
+              type="integer"
               id="department"
               value={department}
               onChange={(e) => setDepartment(e.target.value)}
