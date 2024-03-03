@@ -8,7 +8,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 45px;
+  padding: 45px
 }
 
 .inputs{
@@ -16,8 +16,9 @@
   flex-direction: row;
     font-size: 29px;
     font-family: 'Josefin Slab', serif; 
-    margin-left:10vmin;
+    margin-left:24.5vmin;
     justify-content: flex-start;
+    box-shadow: 0 0 10px 5px rgb(173, 189, 231);
 }
 
 .dept{
