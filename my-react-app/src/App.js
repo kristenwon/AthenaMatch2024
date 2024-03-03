@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import './App.css';
+import TutorPage from "./routes/TutorPage";
 
 function App() {
   // State variables to store department and course number
@@ -7,31 +9,12 @@ function App() {
   const [courseNumber, setCourseNumber] = useState('');
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Class Information</h1>
-          <div>
-            <label htmlFor="department">Department:</label>
-            <input
-              type="integer"
-              id="department"
-              value={department}
-              onChange={(e) => setDepartment(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="courseNumber">Course Number:</label>
-            <input
-              type="text"
-              id="courseNumber"
-              value={courseNumber}
-              onChange={(e) => setCourseNumber(e.target.value)}
-              required
-            />
-          </div>
-          <button type="submit">Submit</button>
-      </header>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/tutor-page" element={<TutorPage/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
