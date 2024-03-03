@@ -4,9 +4,11 @@ import profilePic from '../components/profile-icon.png';
 
 //Create a <link> element
 const link = document.createElement('link');
-link.rel = 'stylesheet'
-link.href = 'https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet';
+link.rel = 'stylesheet';
+link.href='https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"';
 document.head.appendChild(link);
+
+
 
 function SideNav() {
   return (

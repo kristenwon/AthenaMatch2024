@@ -4,7 +4,8 @@
     /* position: fixed;
     top: 0;
     left: 0; */
-    background: linear-gradient(180deg, pink, rgb(77, 146, 186));
+    /* background: linear-gradient(180deg, pink, rgb(77, 146, 186)); */
+    background: linear-gradient(180deg, rgb(186, 177, 168), white);
     /* padding-top: 0px; */
     display: flex;
     flex-direction: column;
