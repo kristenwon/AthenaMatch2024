@@ -5,7 +5,7 @@
     top: 0;
     left: 0; */
     /* background: linear-gradient(180deg, pink, rgb(77, 146, 186)); */
-    background: linear-gradient(180deg, rgb(186, 177, 168), white);
+    background: linear-gradient(180deg, rgb(248, 227, 243), rgb(185, 199, 238));
     /* padding-top: 0px; */
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
 .sidenav a {
 
   padding: 15px 15px;
-  font-family: 'Josefin Slab', serif;
+  font-family:serif;
   text-align: center;
     
   font-size: 25px;

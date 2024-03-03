@@ -1,7 +1,18 @@
 import React from 'react';
 import './TutorCard.css';
 
+const Rating = ({ rating }) => {
+  const stars = [];
+  for (let i = 1; i <= 5; i++) {
+    stars.push(<span key={i} className={i <= rating ? 'star-filled' : 'star-empty'}>&#9733;</span>);
+  }
 
+  return (
+    <div>
+      {stars}
+    </div>
+  );
+};
 function TutorCard() {
   return (
     <div className='outer'>
@@ -16,8 +27,14 @@ function TutorCard() {
         </div>
         <div className='righthalf'>
           <h1 className='nametext'>
-            Put Name Here
+            Joe Bruin
           </h1>
+          <div className='rating'>
+              <div>Rating:</div>
+              <div>4.5</div>
+              <div class="stars"></div>
+              </div>
+             
           <div className='stats_2'>
             <div className='avail'>
               <div>Availability: </div>
@@ -26,21 +43,19 @@ function TutorCard() {
               <div className='tag'>2:45 PM</div>
 
             </div>
-            <div className='avail'>
+            <div className='rem'>
               <div>Remote/Hybrid: </div>
                 <div className='tag'>Hybrid</div>
             </div>
-            <div className='avail'>
+            <div className='lang'>
               <div>Language: </div>
               <div className='tag'>English</div>
             </div>
-            <div className='avail'>
-              <div>Rating:</div>
-              <div>4.5</div>
+            
             </div>
           </div>
-        </div>
-    </div>
+     </div>
+    
 
     
   );
