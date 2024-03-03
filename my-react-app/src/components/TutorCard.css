@@ -1,0 +1,30 @@
+.outer {
+    display: flex;
+    flex-direction: column;
+    border-width: 2px;
+}
+
+.outer1 {
+    display: flex;
+    align-items: left;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.outer2 {
+    display: flex;
+}
+
+.outer2_1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.outer2_a {
+    display: flex;
+    flex-direction: column;
+}
+
+.outer2_b {
+    display: flex;
+}

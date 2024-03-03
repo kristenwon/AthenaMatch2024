@@ -1,0 +1,14 @@
+.comps {
+    display:flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+}
+
+.rightside {
+    display:flex;
+    height: 100%;
+    width: 85%;
+    flex-direction: column;
+    background-color: cyan;
+}

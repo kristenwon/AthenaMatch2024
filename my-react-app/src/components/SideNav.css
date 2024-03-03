@@ -1,22 +1,42 @@
 .sidenav {
     height: 100%;
-    width: 250px;
-    position: fixed;
+    width: 15%;
+    /* position: fixed;
     top: 0;
-    left: 0;
-    background-color: #333;
-    padding-top: 20px;
-}
-sidenav a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 18px;
+    left: 0; */
+    background: linear-gradient(180deg, pink, rgb(77, 146, 186));
+    /* padding-top: 0px; */
+    display: flex;
     flex-direction: column;
-    color: #fff;
-    display: block;
-  }
-  
-  .sidenav a:hover {
-    background-color: #555;
+}
+
+.logo {
+    width: 300px; /* Adjust the width of the logo */
+    height: auto;
+    margin-bottom: 0px;
+    
   }
 
+.sidenav a {
+
+    padding: 10px 15px;
+    font-family: 'Josefin Slab', serif;
+    text-align: center;
+    
+    font-size: 25px;
+    display: flex;
+    flex-direction:column;
+    color: #481c3c;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .sidenav a + a {
+    margin-top: 140px; /* Adjust the margin between elements */
+}
+  .sidenav a:hover {
+    color:#ffd6e5;
+    background-color: #460c2b;
+  }
+  
