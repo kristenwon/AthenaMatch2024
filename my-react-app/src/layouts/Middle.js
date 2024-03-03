@@ -1,14 +1,12 @@
 import React from 'react';
 import '../components/TutorCard.js';
+import '../components/middle.css';
 
 function Middle() {
   return (
     <div className="middle">
-      <a href="#">Profile</a>
-      <a href="#">Direct Messages</a>
-      <a href="#">About</a>
     </div>
   );
 }
 
-export default SideNav;
+export default Middle;
