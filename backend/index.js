@@ -35,17 +35,17 @@ const db = firebase.firestore();
 
 ///// get information from db
 
-// var citiesRef = db.collection("tutors");
-// // curse_needed.value()
+var citiesRef = db.collection("tutors");
+// curse_needed.value()
 
-// // outputting tutors currently teaching user-inputted course
-// citiesRef.where("courses", 'array-contains-any', ["CSCI 104"]).get().then((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//         // doc.data() is never undefined for query doc snapshots
-//         console.log(doc.id, " => ", doc.data());
-//         // let A = doc.data();
-//     });
-// })
+// outputting tutors currently teaching user-inputted course
+citiesRef.where("courses", 'array-contains-any', ["CSCI 104"]).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+        // let A = doc.data();
+    });
+})
 
 // var query = citiesRef.where("name", '==', "Kristen Won");
 

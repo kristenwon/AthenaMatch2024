@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+    <button></button>
+
+
+
+    <span>Name: </span><label id="name"></label></span><br>
+    <span>Availability: </span><label id="availability"></label></span><br>
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyCyBpm8Mt38vZoJuLlTwJZ1E5HyQ3UCUXQ",
+                authDomain: "usc-hack-2024.firebaseapp.com",
+                databaseURL: "https://usc-hack-2024-default-rtdb.firebaseio.com",
+                projectId: "usc-hack-2024",
+                storageBucket: "usc-hack-2024.appspot.com",
+                messagingSenderId: "727825775169",
+                appId: "1:727825775169:web:1fb82321cb75983a4324c0",
+                measurementId: "G-XH4995YCG3"
+            };
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+    
+            var citiesRef = db.collection("tutors");
+            // curse_needed.value()
+    
+            // outputting tutors currently teaching user-inputted course
+            var tutorsList = [];
+            citiesRef.where("courses", 'array-contains-any', ["CSCI 104"]).get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    // doc.data() is never undefined for query doc snapshots
+                    // console.log(doc.id, " => ", doc.data());
+                    tutorsList.push(doc.data())
+                    // let A = doc.data();
+                });
+                console.log(tutorsList);
+                $('#name').html(tutorsList[0].name);
+                // $('#courses').html(tutorsList[0].courses);
+                var data = "";
+                for (const availability in tutorsList[0].Available) {
+                    data += `<input type='radio' name='availability' value='${tutorsList[0].Available[availability]}'> ${tutorsList[0].Available[availability]}:00&emsp;`
+                }
+                $('#availability').html(data);
+            })
+        });
+        $('#yesButton').on('click', function (event) {
+            event.preventDefault();
+            // db.collection("match").add({
+            //     name: "Hello",
+            //     match: true
+            //     //   firstname: document.getElementById('firstname').value,
+            //     //   lastname: document.getElementById('lastname').value,
+            //     //   id: document.getElementById('id').value,
+            //     //   university: document.getElementById('university').value,
+            //     //   contacts: document.getElementById('contacts').value
+            // });
+            alert(`You chose ${$('input[name=availability]:checked').val()}`);
+        });
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>
+
+
+<!-- 
+
+
+var citiesRef = db.collection("tutors");
+// curse_needed.value()
+
+// outputting tutors currently teaching user-inputted course
+citiesRef.where("courses", 'array-contains-any', ["CSCI 104"]).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+        // let A = doc.data();
+    });
+}) -->
