@@ -1,13 +1,10 @@
 import React from 'react';
-import TutorCard from '../components/TutorCard.js';
-import '../layouts/Middle.css';
+import '../components/TutorCard.js';
+import '../components/middle.css';
 
 function Middle() {
   return (
-    <div>
-        <div className="tutorcard">
-            <TutorCard/>
-        </div>
+    <div className="middle">
     </div>
   );
 }

@@ -1,15 +1,19 @@
 import React, {useState} from "react";
 import Header from "../layouts/Header";
-import LeftSide from "../layouts/LeftSide";
+import SideNav from "../layouts/SideNav";
+import "../components/tutorPage.css";
 import Middle from "../layouts/Middle";
 
 const TutorPage = () => {
 
     return (
-      <div>
+      <div className="comps">
+        
+        <SideNav/>
+        <div className="rightside">
         <Header/>
-        <LeftSide/>
         <Middle/>
+        </div>
       </div>
     );
     

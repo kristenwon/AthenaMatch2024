@@ -1,11 +1,11 @@
 .sidenav {
     height: 100%;
     width: 15%;
-    position: fixed;
+    /* position: fixed;
     top: 0;
-    left: 0;
-    background-color: #ffd6e5;
-    padding-top: 0px;
+    left: 0; */
+    background: linear-gradient(180deg, pink, rgb(77, 146, 186));
+    /* padding-top: 0px; */
     display: flex;
     flex-direction: column;
 }
@@ -22,7 +22,7 @@
     padding: 10px 15px;
     font-family: 'Josefin Slab', serif;
     text-align: center;
-    text-shadow: #460c2b;
+    
     font-size: 25px;
     display: flex;
     flex-direction:column;
@@ -39,4 +39,4 @@
     color:#ffd6e5;
     background-color: #460c2b;
   }
-
+  
