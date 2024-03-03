@@ -9,7 +9,8 @@ const TutorPage = () => {
     return (
         <div className="App">
           <header className="App-header">
-            <h1>Class Information</h1>
+            <div className="text-black">Choose Your Class</div>
+            <div className="grid-cols-2">
               <div>
                 <label htmlFor="department">Department:</label>
                 <input
@@ -20,16 +21,17 @@ const TutorPage = () => {
                   required
                 />
               </div>
-              <div>
-                <label htmlFor="courseNumber">Course Number:</label>
-                <input
-                  type="text"
-                  id="courseNumber"
-                  value={courseNumber}
-                  onChange={(e) => setCourseNumber(e.target.value)}
-                  required
-                />
-              </div>
+                <div>
+                  <label htmlFor="courseNumber" className="text-gray-900">Course Number:</label>
+                  <input
+                    type="text"
+                    id="courseNumber"
+                    value={courseNumber}
+                    onChange={(e) => setCourseNumber(e.target.value)}
+                    required
+                  />
+                </div>
+            </div>
               <button type="submit">Submit</button>
           </header>
         </div>

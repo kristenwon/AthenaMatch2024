@@ -2,4 +2,4 @@ export function LeftSide() {
 
 }
 
-export 
+export
