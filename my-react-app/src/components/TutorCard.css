@@ -1,5 +1,6 @@
 .card {
     background-color: aqua;
-    height: 50px;
-    width: 100px;
-}
+    max-width: 300px; /* Set a maximum width for the card */
+    margin: 0 auto; /* Center the card horizontally */
+    padding: 20px; /* Add some padding for better spacing */
+  }
