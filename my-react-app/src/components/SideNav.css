@@ -20,19 +20,19 @@
 
 .sidenav a {
 
-    padding: 15px 15px;
-    font-family: 'Josefin Slab', serif;
-    text-align: center;
+  padding: 15px 15px;
+  font-family: 'Josefin Slab', serif;
+  text-align: center;
     
-    font-size: 25px;
-    font-weight: bold;
-    display: flex;
-    flex-direction:column;
-    color: #481c3c;
-    display: block;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  flex-direction:column;
+  color: #481c3c;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s;
+}
 
   .sidenav a + a {
     margin-top: 150px; /* Adjust the margin between elements */

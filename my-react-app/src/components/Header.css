@@ -5,26 +5,33 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 45px;
 }
 
+<<<<<<< HEAD
+=======
 .header .title {
   font-size: 40px; 
   font-family: 'Josefin Slab', serif;
   font-weight:bolder; 
-  margin-right:10vmin;
 }
 
+>>>>>>> 63dcdbe2486a0fd52603a79bb69abd024dfbbe5e
 .inputs{
   display: flex;
   flex-direction: row;
     font-size: 29px;
     font-family: 'Josefin Slab', serif; 
     margin-left:10vmin;
+    justify-content: flex-start;
 }
 
 .dept{
-  margin-right: 5vmin;
+  width: 100vh;
+  height: 5vh;
+  border-radius: 0.5rem;
+  border-width: 0px;
+  text-align: end;
 }

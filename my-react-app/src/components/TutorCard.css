@@ -1,35 +1,44 @@
 .outer {
     display: flex;
     flex-direction: column;
-    border-width: 2px;
     background-color: white;
+    position: relative;
+    /* DOES THIS WORK ON DIFFERENT SIZE SCREENS */
+    top: -8%;
+    left: -5%;
+    width: 70%;
+    height: 65%;
+    padding: 2%;
+    border-radius: 0.5rem; /* 8px */
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
 }
 
-.outer1 {
+.lefthalf {
     display: flex;
+    flex-direction: column;
     align-items: left;
     width: 100%;
-    border: 2px solid black;
 }
 
-.outer2 {
-    display: flex;
+
+.tutoricon img {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    object-fit: fill;
+    object-fit: cover;
+    padding: 2%;
 }
 
-.outer2_1 {
+
+.stats {
     display: flex;
     flex-direction: column;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 3vw;
+    font-size: 1.5rem; /* 16px */
+    flex-grow: 1;
 }
 
-.outer2_a {
-    display: flex;
-    flex-direction: column;
-}
-
-.outer2_b {
-    display: flex;
-}
-
-.tutor-card {
-    background-color: white;
-}
+/* .center */
