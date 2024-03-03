@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+
+.comps {
+    max-width: 100%;
+    overflow: hidden;
+}
