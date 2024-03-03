@@ -48,28 +48,8 @@ citiesRef.where("courses", 'array-contains-any', ["CSCI 104"]).get().then((query
     });
 })
 
-// var query = citiesRef.where("name", '==', "Kristen Won");
-
-// console.log(query);
-
-
-// putting in information from student login 
 
 
 
-// Add a new document in collection "cities"
-// import { collection, addDoc } from "firebase/firestore"; 
-
-// // Add a new document with a generated id.
-// const docRef = await addDoc(collection(db, "students"), {
-//     name: "Tokyo",
-//     country: "Japan",
-//     firstname: document.getElementsByName('firstname').value(),
-//     lastname: document.getElementsByName('lastname').value(),
-//     id: document.getElementsByName('id').value(),
-//     university: document.getElementsByName('university').value(),
-//     contacts: document.getElementsByName('contacts').value()
-
-// });
 console.log("Document written with ID: ", docRef.id);
 

@@ -11,11 +11,22 @@
 
 
 
+    <span>Professor & Year: </span><label id="prof"></label></span><br>
+    <span>Grade: </span><label id="grade"></label></span><br>
+    <span>Ratings: </span><label id="rating"></label></span><br>
+    
     <span>Name: </span><label id="name"></label></span><br>
     <span>Availability: </span><label id="availability"></label></span><br>
+
+    <span>Environment: </span><label id="environment"></label></span><br>
+    <span>Languages: </span><label id="fluent"></label></span><br>
+
+
     <button id="yesButton">Yes</button>
     <button id="noButton">No</button>
 
+    <button id="confirm_button">yawr</button>
+    <!-- <button id="noButton">No</button> -->
 
 
 
@@ -43,7 +54,7 @@
             var citiesRef = db.collection("tutors");
             // curse_needed.value() s
     
-            // outputting tutors currently teaching user-inputted course
+            // outputting tutors currently teaching user-inputted course -- at least one 
             var tutorsList = [];
             citiesRef.where("courses", 'array-contains-any', ["CSCI 104"]).get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
@@ -52,29 +63,142 @@
                     tutorsList.push(doc.data())
                     // let A = doc.data();
                 });
-                console.log(tutorsList);
+
+                // console.log(tutorsList[0].name);
+                // console.log(tutorsList);
+                
+                
+                $('#prof').html(tutorsList[0].Prof_year);
+                $('#grade').html(tutorsList[0].Grade);
+                $('#rating').html(tutorsList[0].Rating);
+
+
                 $('#name').html(tutorsList[0].name);
-                // $('#courses').html(tutorsList[0].courses);
+                
                 var data = "";
                 for (const availability in tutorsList[0].Available) {
-                    data += `<input type='radio' name='availability' value='${tutorsList[0].Available[availability]}'> ${tutorsList[0].Available[availability]}:00&emsp;`
+                    data += (tutorsList[0].Available[availability] + "    ");
                 }
                 $('#availability').html(data);
+
+                var data = "";
+                for (const availability in tutorsList[0].environment) {
+                    data += (tutorsList[0].environment[availability]);
+                }
+                $('#environment').html(data);
+
+
+                var data = "";
+                for (const availability in tutorsList[0].Fluent) {
+                    data += (tutorsList[0].Fluent[availability]);
+                }
+                $('#fluent').html(data);
+
+
+            
+                
             })
-        });
+            
+
+           
+            
+                
+
+        $('#noButton').on('click', function (event) {
+        event.preventDefault();
+        // var hi = tutorsList[0].name; 
+        
+        var data = "";
+
+        for (const availability in tutorsList[0].Available) {
+            data += `<input type='radio' name='availability' value='${tutorsList[0].Available[availability]}'> ${tutorsList[0].Available[availability]}`
+        }//00&emsp;
+        $('#availability').html(data);
+
+        })
+
+
+
+
         $('#yesButton').on('click', function (event) {
             event.preventDefault();
-            // db.collection("match").add({
-            //     name: "Hello",
-            //     match: true
-            //     //   firstname: document.getElementById('firstname').value,
-            //     //   lastname: document.getElementById('lastname').value,
-            //     //   id: document.getElementById('id').value,
-            //     //   university: document.getElementById('university').value,
-            //     //   contacts: document.getElementById('contacts').value
-            // });
-            alert(`You chose ${$('input[name=availability]:checked').val()}`);
+            // var hi = tutorsList[0].name; 
+            alert(`You matched with ${tutorsList[0].name}!`);
+            
+            var data = "";
+
+            
+
+            for (const availability in tutorsList[0].Available) {
+                data += `<input type='radio' name='availability' value='${tutorsList[0].Available[availability]}'> ${tutorsList[0].Available[availability]}`
+            }//00&emsp;
+            $('#availability').html(data);
+
+            var data = "";
+            for (const availability in tutorsList[0].environment) {
+                data += `<input type='radio' name='environment' value='${tutorsList[0].environment[availability]}'> ${tutorsList[0].environment[availability]}`
+            }//00&emsp;
+            $('#environment').html(data);
+
+            var data = "";
+            for (const availability in tutorsList[0].Fluent) {
+                data += `<input type='radio' name='fluent' value='${tutorsList[0].Fluent[availability]}'> ${tutorsList[0].Fluent[availability]}`
+            }//00&emsp;
+            $('#fluent').html(data);
+
+        })
+
+        ////////////// if confirmed yes
+
+
+        $('#confirm_button').on('click', function (event) {
+            event.preventDefault();
+            alert(`Confirmation`);
+            //${tutorsList[0].name}
+
+            alert(`Details: ${tutorsList[0].name}, ${$('input[name=availability]:checked').val()},  ${$('input[name=environment]:checked').val()},  ${$('input[name=fluent]:checked').val()}`);
+
+            // for (const availability in tutorsList[0].Available) {
+            //     data += `<input type='radio' name='availability' value='${tutorsList[0].Available[availability]}'> ${tutorsList[0].Available[availability]}`
+            //     }//00&emsp;
+
+            // $('#availability').html(data);
+
+        })
+
         });
+
+
+
+
+        
+
+// $('#Available').html(tutorsList[0].name);
+//                 var data = "";
+//                 for (const availability in tutorsList[0].Available) {
+//                     data += `<input type='radio' name='availability' value='${tutorsList[0].Available[availability]}'> ${tutorsList[0].Available[availability]}`
+//                 }//00&emsp;
+
+        // $('#confirm_button').on('click', function (event) {
+        //     event.preventDefault();
+        //     //${$('#name').html(tutorsList[0].name)} at 
+        //     alert(`You chose ${$('input[name=availability]:checked').val()}!`);
+        // })
+
+
+        // $('#noButton').on('click', function (event) {
+        //     event.preventDefault();
+        //     // db.collection("match").add({
+        //     //     name: "Hello",
+        //     //     match: true
+        //     //     //   firstname: document.getElementById('firstname').value,
+        //     //     //   lastname: document.getElementById('lastname').value,
+        //     //     //   id: document.getElementById('id').value,
+        //     //     //   university: document.getElementById('university').value,
+        //     //     //   contacts: document.getElementById('contacts').value
+        //     // });
+        //     alert(`You chose ${$('input[name=availability]:checked').val()}`);
+        // });
 
 
     </script>
