@@ -3,7 +3,7 @@ import React from 'react';
 function TutorCard() {
   return (
    
-        <div className="outer">
+        <div className="outer tutor-card">
             <div className='outer1'>
                 <div className='outer1_a'>
                     <img src="https://people.com/thmb/bPusbWRbciEGZBVhsDZ5UaN2Cug=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/michael-cera-021723-1-d1b41c08311a433e864dbb69714de386.jpg" style={{width:"100px",height:"auto"}} ></img>
