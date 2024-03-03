@@ -13,7 +13,7 @@ function SideNav() {
     <div className="sidenav">
      <img src={profilePic} alt="Profile" className="profilePic" />
       <a href="#">Profile</a>
-      <a href="#">Direct Messages</a>
+      <a href="#">Messages</a>
       <a href="#">About</a>
     </div>
   );
