@@ -4,19 +4,39 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #333;
-    padding-top: 20px;
-}
-sidenav a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 18px;
+    background-color: #ffd6e5;
+    padding-top: 0px;
+    display: flex;
     flex-direction: column;
-    color: #fff;
-    display: block;
+}
+
+.logo {
+    width: 300px; /* Adjust the width of the logo */
+    height: auto;
+    margin-bottom: 0px;
+    
   }
-  
+
+.sidenav a {
+
+    padding: 10px 15px;
+    font-family: 'Josefin Slab', serif;
+    text-align: center;
+    text-shadow: #460c2b;
+    font-size: 25px;
+    display: flex;
+    flex-direction:column;
+    color: #481c3c;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .sidenav a + a {
+    margin-top: 140px; /* Adjust the margin between elements */
+}
   .sidenav a:hover {
-    background-color: #555;
+    color:#ffd6e5;
+    background-color: #460c2b;
   }
 
