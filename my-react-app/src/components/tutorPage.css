@@ -12,4 +12,5 @@
     min-width: 100%;
     flex-direction: column;
     background: rgb(205, 233, 242);
+    overflow: hidden;
 }
