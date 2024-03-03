@@ -7,14 +7,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 45px;
 }
 
 .header .title {
   font-size: 40px; 
   font-family: 'Josefin Slab', serif;
   font-weight:bolder; 
-  align-self: center;
+  margin-right:10vmin;
 }
 
 .inputs{

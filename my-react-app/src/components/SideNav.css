@@ -1,6 +1,6 @@
 .sidenav {
     height: 100%;
-    width: 15%;
+    width: 10%;
     /* position: fixed;
     top: 0;
     left: 0; */
@@ -8,22 +8,24 @@
     /* padding-top: 0px; */
     display: flex;
     flex-direction: column;
+    transition: 0.3s;
 }
 
 .logo {
-    width: 300px; /* Adjust the width of the logo */
+    width: 150px; /* Adjust the width of the logo */
     height: auto;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     
   }
 
 .sidenav a {
 
-    padding: 10px 15px;
+    padding: 15px 15px;
     font-family: 'Josefin Slab', serif;
     text-align: center;
     
     font-size: 25px;
+    font-weight: bold;
     display: flex;
     flex-direction:column;
     color: #481c3c;
@@ -33,8 +35,16 @@
   }
 
   .sidenav a + a {
-    margin-top: 140px; /* Adjust the margin between elements */
+    margin-top: 150px; /* Adjust the margin between elements */
 }
+
+  
+  .sidenav:hover {
+    height:100%;
+     width:15%; 
+     transition: all 0.4s;
+  }
+
   .sidenav a:hover {
     color:#ffd6e5;
     background-color: #460c2b;
