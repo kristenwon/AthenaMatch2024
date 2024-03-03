@@ -1,0 +1,16 @@
+.header {
+    background-color: #777;
+    color: #fff;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    right: 0;
+  }
+  
+.header .inputs {
+    flex-direction: row;
+    justify-content: flex-end;
+}
