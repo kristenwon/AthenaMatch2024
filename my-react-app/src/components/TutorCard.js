@@ -1,35 +1,36 @@
 import React from 'react';
-import {
-  MDBCard,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardBody,
-  MDBCardImage,
-  MDBRow,
-  MDBCol
-} from 'mdb-react-ui-kit';
 
 function TutorCard() {
   return (
-    <MDBCard style={{ maxWidth: '540px' }}>
-      <MDBRow className='g-0'>
-        <MDBCol md='4'>
-          <MDBCardImage src='https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.webp' alt='...' fluid />
-        </MDBCol>
-        <MDBCol md='8'>
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              This is a wider card with supporting text below as a natural lead-in to additional content. This
-              content is a little bit longer.
-            </MDBCardText>
-            <MDBCardText>
-              <small className='text-muted'>Last updated 3 mins ago</small>
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCol>
-      </MDBRow>
-    </MDBCard>
+   
+        <div className="outer">
+            <div className='outer1'>
+                <div className='outer1_a'>
+                    <img src="https://people.com/thmb/bPusbWRbciEGZBVhsDZ5UaN2Cug=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/michael-cera-021723-1-d1b41c08311a433e864dbb69714de386.jpg" style={{width:"100px",height:"auto"}} ></img>
+                </div>
+                <div>
+                    {/* replace with backend name data tutor */}
+                    Name
+                </div>
+            </div>
+            <div className='outer2'>
+                <div className='outer2_1'>
+                    <div className='outer2_a'>
+                        <div>Professor: Joe Trojan</div>
+                        <div>Grade: A-</div>
+                        <div>Fluent: English, Spanish</div>
+                    </div>
+                    <div className='outer2_b'>
+                        <button>remote</button>
+                        <button>hybrid</button>
+                    </div>
+                </div>
+                <div>
+                    This is where calendar should go
+                </div>
+            </div>
+        </div>
+   
   );
 }
 
