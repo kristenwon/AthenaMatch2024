@@ -72,17 +72,21 @@
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 
-$('#AddButton').on('click', function(event){
+$('#AddButton').on('click', async function(event){
     event.preventDefault();
+    const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
     db.collection("students").add({
       firstname: document.getElementById('firstname').value,
       lastname: document.getElementById('lastname').value,
       id: document.getElementById('id').value,
       university: document.getElementById('university').value,
       contacts: document.getElementById('contacts').value
+    }).then(response => {
+        alert("Done");
+        window.location.href = 'main.html';
     });
-    alert("Done");
-    window.location.href = 'main.html';
+    
+    
 })
 
 
