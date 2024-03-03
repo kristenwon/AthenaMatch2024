@@ -14,7 +14,7 @@ function prelogin(){
 
         <div class="login">
         <div class="name">
-        First Name:
+        First Name: 
         Last Name: 
         </div>
         <div class="uni">University:</div>
