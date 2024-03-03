@@ -14,28 +14,15 @@ function Header() {
 
   return (
     <div className="header">
-      <div className="title">Choose Your Class:</div>
       <div className="inputs">
-        <div className="dept">
-          <label htmlFor="department">Department: </label>
           <input
             type="text"
             id="department"
             value={department}
             onChange={(e) => setDepartment(e.target.value)}
-            placeholder="Ex. CSCI"
+            placeholder="Enter your course         "
+            className="dept"
           />
-        </div>
-        <div>
-          <label htmlFor="courseNumber">Course Number: </label>
-          <input
-            type="text"
-            id="courseNumber"
-            value={courseNumber}
-            onChange={(e) => setCourseNumber(e.target.value)}
-            placeholder="Ex. 104"
-          />
-        </div>
       </div>
     </div>
   );
