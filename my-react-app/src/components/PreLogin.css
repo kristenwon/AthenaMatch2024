@@ -6,12 +6,11 @@
 }
 
 .container {
+    margin-top: 13.25vw;
     height: 160vh; /* Set a fixed height, for example, 100% of the viewport height */
     overflow-y: auto; /* Enable vertical scrolling */
-    background-color: rgb(27, 27, 27);
+    background: linear-gradient(180deg, rgb(27, 27, 27), rgb(195, 161, 182));
     z-index: -1;
-    
-
 }
 
 
@@ -45,7 +44,7 @@
     margin-top:19vw;
     margin-left: 60vw;
     margin-bottom: 0;
-    color: rgb(255, 40, 108);
+    color: rgb(255, 234, 238);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     font-style: italic;
@@ -77,12 +76,14 @@
     margin-top: -55vw;
     margin-left: 35vw; 
     margin-bottom: 4vw; 
-    background: linear-gradient(180deg, #ff4a69, rgb(77, 146, 186));
+    background: rgb(167, 188, 193);
+    border-radius: 20px;
     z-index: 1; 
 }
 
+
 .name, .uni, .contact {
-    color:lightpink;
+    color:black;
     text-decoration: none;
     text-align: center;
     margin-top: 7vw;
@@ -98,6 +99,6 @@
 .contact {
     display: flex;
     flex-direction: row;
-    margin-left: 13vw;
+    margin-left: 1vw;
 }
 
