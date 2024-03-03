@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 function Header() {
     // State variables to store department and course number
