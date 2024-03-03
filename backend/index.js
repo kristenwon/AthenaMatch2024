@@ -31,21 +31,44 @@ firebase.initializeApp(firebaseConfig);
 
 // Initialize Cloud Firestore and get a reference to the service
 const db = firebase.firestore();
-
-
+ 
 
 ///// get information from db
 
-var citiesRef = db.collection("tutors");
+// var citiesRef = db.collection("tutors");
+// // curse_needed.value()
 
-// Create a query against the collection.
-var query = citiesRef.where("courses", 'array-contains-any', ["CSCI 104"]).get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
-        // let A = doc.data();
-    });
-})
+// // outputting tutors currently teaching user-inputted course
+// citiesRef.where("courses", 'array-contains-any', ["CSCI 104"]).get().then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//         // doc.data() is never undefined for query doc snapshots
+//         console.log(doc.id, " => ", doc.data());
+//         // let A = doc.data();
+//     });
+// })
+
 // var query = citiesRef.where("name", '==', "Kristen Won");
 
 // console.log(query);
+
+
+// putting in information from student login 
+
+
+
+// Add a new document in collection "cities"
+// import { collection, addDoc } from "firebase/firestore"; 
+
+// // Add a new document with a generated id.
+// const docRef = await addDoc(collection(db, "students"), {
+//     name: "Tokyo",
+//     country: "Japan",
+//     firstname: document.getElementsByName('firstname').value(),
+//     lastname: document.getElementsByName('lastname').value(),
+//     id: document.getElementsByName('id').value(),
+//     university: document.getElementsByName('university').value(),
+//     contacts: document.getElementsByName('contacts').value()
+
+// });
+console.log("Document written with ID: ", docRef.id);
+
