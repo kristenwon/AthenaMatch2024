@@ -1,6 +1,9 @@
 import React from "react";
 
 function Header() {
+    // State variables to store department and course number
+    const [department, setDepartment] = useState('');
+    const [courseNumber, setCourseNumber] = useState('');
     return (
         <div className="App">
           <header className="App-header">
