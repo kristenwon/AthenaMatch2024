@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Header from "../layouts/Header";
 import LeftSide from "../layouts/LeftSide";
+import Middle from "../layouts/Middle";
 
 const TutorPage = () => {
 
@@ -8,6 +9,7 @@ const TutorPage = () => {
       <div>
         <Header/>
         <LeftSide/>
+        <Middle/>
       </div>
     );
     
