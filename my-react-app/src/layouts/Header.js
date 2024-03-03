@@ -1,12 +1,6 @@
-import React, {useState} from "react";
-import Header from "../layouts/"
+import React from "react";
 
-const TutorPage = () => {
-
-    // State variables to store department and course number
-    const [department, setDepartment] = useState('');
-    const [courseNumber, setCourseNumber] = useState('');
-
+function Header() {
     return (
         <div className="App">
           <header className="App-header">
@@ -36,8 +30,7 @@ const TutorPage = () => {
               <button type="submit">Submit</button>
           </header>
         </div>
-      );
-    
+    );
 }
 
-export default TutorPage;
+export default Header;
