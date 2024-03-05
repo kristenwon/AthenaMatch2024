@@ -53,7 +53,7 @@ const TutorPage = () => {
   };
 
     return (
-      <div className="comps">
+      <div className="leftside">
         <SideNav />
         <div className="rightside">
           <Header />
