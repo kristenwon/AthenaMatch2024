@@ -1,6 +1,9 @@
 import React from 'react';
 import '../components/PreLogin.css';
 import boxGif from '../components/boxGif.gif';
+import { db } from '../firebase';
+import {collection, addDoc} from '@firebase/firestore';
+
 
 function prelogin(){
     return(
@@ -12,24 +15,50 @@ function prelogin(){
                 <div className="ideas">connecting ideas.</div>
                 <div class="container"></div>
 
-            <div class="login">
-                <div className='signupmessage'>Sign up to match with a tutor!</div>
-                <div class="name">
-                    <input type="text" placeholder='First Name'></input>
-                    <input type="text" placeholder='Last Name'></input>
-                </div>
-                <div class="uni">
-                <input type="text" placeholder='University'></input>
-                </div>
-                <div class="contact">
-                <input type="text" placeholder='ID'></input> 
-                <input type="text" placeholder='Email'></input>
-                </div>
-                <div className='signup'>
-                    <button>Sign up</button>
-                </div>
-            </div>
+        <div className="log-in"> 
+
+        <div className='signupmessage'>Sign up to match with a tutor!</div>
+        
+        <div className='name'>
+            <label> First Name </label>
+            <input type="text" id="firstname"/>
+
+            <label> Last Name </label>
+            <input type="text" id="lastname"/>
         </div>
+
+        <div classname='uni'>
+            <label> University</label>
+            <input type="text" id="university"/>
+        </div>
+
+        <div className='idnum'>
+            <label> ID</label>
+            <input type="text" id="id"/>
+            <br></br>
+        </div>
+
+
+        <button id="AddButton" onClick={()=>{
+            //  event.preventDefault();
+            //  const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+            addDoc(collection(db, "students"), {
+            
+                firstname: document.getElementById('firstname').value,
+                lastname: document.getElementById('lastname').value,
+                id: document.getElementById('id').value,
+                university: document.getElementById('university').value,
+                contacts: document.getElementById('contacts').value
+              }).then(response => {
+                 alert("Done");
+                 window.location.href = 'main.html';
+             });
+             
+        }}>Sign Up</button>
+
+    
+    </div>
+    </div>
     );
 }
 
