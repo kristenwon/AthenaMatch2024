@@ -1,12 +1,6 @@
 import React from 'react';
 import './TutorCard.css';
 
-const Rating = ({rating}) => {
-  const stars = [];
-  for(let i=1; i <=5; i++){
-    stars.push(<span key={i} className={i <= rating ? 'star-filled' : 'star-empty'}>&#9733;</span>);
-  }
-
 function TutorCard({ tutorsList, tt }) {
   // Check if tutorsList is not empty and tt is within bounds
   if (tutorsList.length === 0 || tt >= tutorsList.length) {
