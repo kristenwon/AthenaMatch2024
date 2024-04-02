@@ -1,24 +1,30 @@
-.tutorcard {
+
+.everything {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  flex-grow: 1; /* Let tutorcard grow to take available space */
+  justify-content: center;
+  height: 90vh; 
+}
+
+.tutorcard {
+  margin-top: 6vw;
+  margin-left: 20vw;
+  margin-bottom: 20px; 
 }
 
 .swiping {
   display: flex;
-  align-items: center;
-  flex-grow: 1;
-  padding: 0 20px; /* Add some padding for spacing */
+  justify-content:space-between ;
+  padding-right: 17vw;
+  margin-top: -17vw;
+  margin-left: 3vw;
+  margin-bottom: 20px; 
+
 }
 
-.nobutt img {
-  width: 5vw;
+.swiping img {
   height: 5vw;
+  width: 5vw;
 }
 
-.yesbutt img {
-  width: 5vw;
-  height: 5vw;
-}

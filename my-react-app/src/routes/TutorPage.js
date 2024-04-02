@@ -66,11 +66,12 @@ const TutorPage = () => {
             }}
           >
             
-            <div id="buttonsDiv">
-              <button id="yesButton" onClick={handleYesButtonClick}>
+            <div id="swiping">
+              <button id="Like" onClick={handleYesButtonClick}>
                 Yes
               </button>
-              <button id="noButton" onClick={handleNoButtonClick}>
+              <button id="dislike" onClick={handleNoButtonClick}>
+
                 No
               </button>
             </div>
