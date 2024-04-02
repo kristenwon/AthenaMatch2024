@@ -5,11 +5,13 @@ import TutorCard from '../components/TutorCard.js';
 import likepng from '../components/like.png';
 import dislikepng from '../components/dislike.png';
 
-function Middle() {
+
+function Middle({tutorsList, tt}) {
   return (
-    <div className="everything">
-    <div className='tutorcard'>
-            <TutorCard/>
+    <div className='swiping'>
+        
+        <div className='tutorcard'>
+            <TutorCard tutorsList={tutorsList} tt={tt} />
         </div>
     <div className='swiping'>
         
