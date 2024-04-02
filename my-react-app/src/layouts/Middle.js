@@ -5,7 +5,6 @@ import TutorCard from '../components/TutorCard.js';
 import likepng from '../components/like.png';
 import dislikepng from '../components/dislike.png';
 
-
 function Middle({tutorsList, tt}) {
   return (
     <div className='swiping'>

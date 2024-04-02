@@ -18,7 +18,6 @@ const TutorPage = () => {
       const tutorsData = querySnapshot.docs.map(doc => doc.data());
       setTutorsList(tutorsData);
     };
-    
 
     fetchTutors();
   }, []);
@@ -72,6 +71,7 @@ const TutorPage = () => {
                 Yes
               </button>
               <button id="dislike" onClick={handleNoButtonClick}>
+
                 No
               </button>
             </div>
